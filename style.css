@@ -1,0 +1,8 @@
+body {
+    background-color: #F89090; /* Pink Figma */
+    color: #A10000; /* Merah Figma */
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+.container { max-width: 800px; margin: auto; text-align: left; }

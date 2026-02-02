@@ -1,8 +1,100 @@
-body {
-    background-color: #F89090; /* Pink Figma */
-    color: #A10000; /* Merah Figma */
-    font-family: sans-serif;
-    text-align: center;
-    padding: 50px;
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container { max-width: 800px; margin: auto; text-align: left; }
+
+body {
+    background-color: #F89090; /* Pink latar Figma */
+    color: #A10000; /* Merah teks Figma */
+    font-family: 'Anuphan', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 900px; /* Menjaga konten tidak terlalu lebar */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.line-separator {
+    border: none;
+    border-top: 1px solid #A10000;
+    margin-bottom: 40px;
+}
+
+/* Tata Letak Konten (Foto Kiri, Teks Kanan) */
+.content-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.photo-container img {
+    width: 280px; /* Sesuaikan ukuran foto di Figma */
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.text-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.text-container p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Spotify Wrapper */
+#spotify-section {
+    width: 100%;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

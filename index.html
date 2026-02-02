@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Joanna Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanna Tambunan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&family=AR+One+Sans&family=Archivo+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+
+    <div class="wrapper">
         <header>
-            <h1>joanna tambunan</h1>
-            <p>sophomore information technology @ tel-u ‘24</p>
+            <h1 class="main-title">joanna tambunan</h1>
+            <p class="subtitle">sophomore information technology @ tel-u ‘24</p>
         </header>
+
         <nav>
-            <span>Home</span> | <span>About</span> | <span id="btn-others" style="cursor:pointer; font-weight:bold;">Others</span>
+            <span class="nav-item">Home</span>
+            <span class="nav-item">About</span>
+            <span class="nav-item">Experience</span>
+            <span class="nav-item">Project</span>
+            <span class="nav-item" id="btn-others">Others</span>
         </nav>
-        <hr>
-        <div id="content">
-            <div id="about-section">
-                <img src="foto-joanna.png" width="200">
-                <p>Hi, I'm Joanna Michelle Tambunan...</p>
+
+        <hr class="line-separator">
+
+        <main id="main-content">
+            <div id="about-section" class="content-flex">
+                <div class="photo-container">
+                    <img src="foto-joanna.png" alt="Joanna Michelle Tambunan">
+                </div>
+                <div class="text-container">
+                    <h2>Joanna Michelle Tambunan</h2>
+                    <p>Hi, you can call me Jo or Jojo. I’m a student at Telkom University majoring in Information Technology. I love learning and building things that are related to Web Dev, UI/UX, and Machine Learning.</p>
+                    <p>Beside those, i also into writing. I have several experiences in proposal competitions, particularly in the innovation division.</p>
+                </div>
             </div>
-            <div id="spotify-section" style="display:none;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM3M" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <div id="spotify-section" style="display: none;">
+                <iframe style="border-radius:12px" src="http://googleusercontent.com/spotify.com/7" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-        </div>
+        </main>
     </div>
 
     <script>
-        document.getElementById('btn-others').onclick = function() {
-            document.getElementById('about-section').style.display = 'none';
-            document.getElementById('spotify-section').style.display = 'block';
-        };
+        // Logika pindah konten
+        const btnOthers = document.getElementById('btn-others');
+        const aboutSec = document.getElementById('about-section');
+        const spotifySec = document.getElementById('spotify-section');
+
+        btnOthers.addEventListener('click', () => {
+            aboutSec.style.display = 'none';
+            spotifySec.style.display = 'block';
+            btnOthers.style.fontWeight = 'bold';
+            btnOthers.style.textDecoration = 'underline';
+        });
     </script>
 </body>
 </html>
